@@ -33,6 +33,6 @@ make flash
 Here are some useful links for developing on the Arduino using C or V:
 
 - [Getting Started with Baremetal Arduino C Programming](https://www.youtube.com/watch?v=j4xw8QomkXs)
-- [Flashing Arduino hex file in Linux with Avrdude](https://skjoldtech.wordpress.com/2019/05/10/flashing-arduino-hex-file-in-linux-with-avrdude/)
 - [avr-libc documentation](http://www.nongnu.org/avr-libc/user-manual/)
-- [Arduino RTC Library](https://github.com/feilipu/Arduino_RTC_Library)
+- [iom328p.h](https://github.com/vancegroup-mirrors/avr-libc/blob/master/avr-libc/include/avr/iom328p.h)
+- [Flashing Arduino hex file in Linux with Avrdude](https://skjoldtech.wordpress.com/2019/05/10/flashing-arduino-hex-file-in-linux-with-avrdude/)
