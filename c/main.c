@@ -1,7 +1,7 @@
+// blinking on the arduino example
+
 #include <avr/io.h>
 #include <util/delay.h>
-
-// blinking on the arduino example
 
 int main(void) {
   // set PORTB5 as an output

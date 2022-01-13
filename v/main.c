@@ -20,37 +20,17 @@ typedef struct none none;
 
 // V includes:
 // defined by module `main`
-#define EMPTY_STRUCT_DECLARATION
-// defined by module `main`
-#define VV_LOCAL_SYMBOL
+#define array
 // defined by module `main`
 #define voidptr void*
 // defined by module `main`
-#define array
+#define VV_LOCAL_SYMBOL
+// defined by module `main`
+#define EMPTY_STRUCT_DECLARATION
 // defined by module `main`
 #define _vcleanup  main__v_cleanup
 // defined by module `main`
 #define _vinit     main__v_init
-// defined by module `main`
-#define byte uint8_t
-
-
-// added by module `main`
-
-#if defined(__has_include)
-
-#if __has_include(<stdio.h>)
-#include <stdio.h>
-#else
-#error VERROR_MESSAGE Header file <stdio.h>, needed for module `main` was not found. Please install the corresponding development headers.
-#endif
-
-#else
-#include <stdio.h>
-#endif
-
-
-
 
 
 // added by module `main`
@@ -91,7 +71,6 @@ typedef struct none none;
 // Enum definitions:
 
 // V type definitions:
-typedef array Array_voidptr;
 // builtin types:
 //------------------ #endbuiltin
 struct none {
@@ -124,15 +103,8 @@ VV_LOCAL_SYMBOL void main__main(void);
 // << typeof() support for sum types
 
 VV_LOCAL_SYMBOL void main__v_init(int argc, char** argv) {
-	printf("v_init start\n");
-	printf("  argc: %d\n", argc);
-	printf("  argv: %p\n", argv);
-	printf("  argv[0]: %s\n", argv[0]);
-	printf("--------------------------------------\n");
 }
 VV_LOCAL_SYMBOL void main__v_cleanup(void) {
-	printf("--------------------------------------\n");
-	printf("v_cleanup done\n");
 }
 VV_LOCAL_SYMBOL void main__main(void) {
 	{ // Unsafe block
