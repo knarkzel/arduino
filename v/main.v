@@ -4,6 +4,11 @@
 #define array
 #define _vcleanup  main__v_cleanup
 #define _vinit     main__v_init
+#define byte uint8_t
+
+#include <stdio.h>
+#include <avr/io.h>
+#include <util/delay.h>
 
 fn C.printf(&char, ...voidptr) int
 
@@ -22,10 +27,24 @@ fn v_cleanup() {
 	C.printf(c'v_cleanup done\n')
 }
 
-fn abc(x int, y int) int {
-	return x + y
-}
+// blinking on the arduino example
 
 fn main() {
-	C.printf(c'abc(): %d\n', abc(2, 3))
+	unsafe {
+		// set PORTB5 as an output
+		C.DDRB = C.DDRB | (1 << C.DDB5)
+		for {
+			// set PORTB5
+			C.PORTB = C.PORTB | (1 << C.PORTB5)
+
+			// wait
+			C._delay_ms(1000)
+
+			// unset PORTB5
+			C.PORTB = C.PORTB & ~(1 << C.PORTB5)
+
+			// wait somemore
+			C._delay_ms(1000)
+		}
+	}
 }
