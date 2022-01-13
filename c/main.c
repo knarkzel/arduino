@@ -7,7 +7,7 @@ int main(void) {
   // set PORTB5 as an output
   DDRB = DDRB | (1 << DDB5);
 
-  while(1) {
+  for (;;) {
     // set PORTB5
     PORTB = PORTB | (1 << PORTB5);
 

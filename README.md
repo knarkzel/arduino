@@ -17,6 +17,12 @@ cd c/
 make
 ```
 
+For developing using V:
+```bash
+cd v/
+make
+```
+
 For flashing, do following
 ```bash
 make flash
