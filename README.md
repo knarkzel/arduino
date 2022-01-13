@@ -2,10 +2,6 @@
 
 This repository is boilerplate for anyone that wants to develop for the Arduino using C or V.
 
-## Dependencies (arch-linux)
-
-`avr-gcc` `avr-libc` `avrdude`
-
 ## Getting started
 
 Make sure you have following installed: `make` `avr-gcc` `avr-libc` `avrdude`. Then run following:
@@ -13,6 +9,11 @@ Make sure you have following installed: `make` `avr-gcc` `avr-libc` `avrdude`. T
 ```bash
 git clone https://github.com/knarkzel/arduino
 cd arduino/
+```
+
+For developing using C:
+```bash
+cd c/
 make
 ```
 
